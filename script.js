@@ -8,9 +8,9 @@ document.getElementById('quadraticForm').addEventListener('submit', function(eve
     const canvas = document.getElementById('quadraticCanvas');
     const ctx = canvas.getContext('2d');
     
-    // Mengatur ukuran canvas agar sesuai dengan lebar layar
+    // Mengatur ukuran canvas agar lebih besar dan responsif
     canvas.width = window.innerWidth * 0.9; // 90% dari lebar layar
-    canvas.height = window.innerHeight * 0.6; // 60% dari tinggi layar
+    canvas.height = window.innerHeight * 0.8; // 80% dari tinggi layar
     
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     

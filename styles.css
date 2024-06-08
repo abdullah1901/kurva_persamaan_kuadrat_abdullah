@@ -18,7 +18,7 @@ body {
 .canvas-container {
     position: relative;
     width: 100%;
-    padding-bottom: 100%; /* Ratio 1:1 untuk menjaga canvas menjadi kotak */
+    padding-bottom: 80%; /* Ratio 4:5 untuk memperbesar ukuran canvas */
 }
 
 canvas {
