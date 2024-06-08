@@ -1,18 +1,14 @@
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    padding: 0;
 }
 
 .container {
     text-align: center;
-    width: 90%;
     max-width: 800px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 .canvas-container {
@@ -26,7 +22,7 @@ body {
 }
 
 input[type="number"] {
-    width: 100%;
+    width: calc(100% - 10px); /* Lebar input dikurangi padding */
     padding: 5px;
     box-sizing: border-box;
 }
@@ -39,7 +35,6 @@ canvas {
     height: 100%;
     border: 1px solid black;
 }
-
 
 form {
     margin-bottom: 20px;
