@@ -33,9 +33,9 @@ document.getElementById('quadraticForm').addEventListener('submit', function(eve
         return;
     }
     
-    // Menentukan rentang nilai x dari -30 hingga 30
-    const xMin = -30;
-    const xMax = 30;
+    // Menentukan rentang nilai x dari -10 hingga 10
+    const xMin = -10;
+    const xMax = 10;
     
     // Rentang nilai x
     const xValues = [];
@@ -46,13 +46,13 @@ document.getElementById('quadraticForm').addEventListener('submit', function(eve
     // Menghitung nilai y berdasarkan persamaan kuadrat
     const yValues = xValues.map(x => a * x * x + b * x + c);
     
-    // Skala untuk menggambar kurva agar sesuai dengan rentang -30 hingga 30
+    // Skala untuk menggambar kurva agar sesuai dengan rentang -10 hingga 10
     const scaleX = canvas.width / (xMax - xMin);
-    const scaleY = canvas.height / (2 * 30); // Rentang y dari -30 hingga 30
+    const scaleY = canvas.height / (35); // Rentang y dari -30 hingga 5
     
     // Pusatkan kurva pada canvas
     const offsetX = canvas.width / 2;
-    const offsetY = canvas.height / 2;
+    const offsetY = canvas.height - (canvas.height / 35) * 30; // 30 adalah nilai minimum y
     
     // Membuat plot
     ctx.beginPath();
@@ -93,7 +93,7 @@ document.getElementById('quadraticForm').addEventListener('submit', function(eve
     }
     
     // Angka pada sumbu y
-    for (let y = -30; y <= 30; y++) {
+    for (let y = -30; y <= 5; y++) {
         const yPos = -y * scaleY + offsetY;
         ctx.fillText(y, offsetX - 10, yPos);
         ctx.beginPath();
@@ -101,7 +101,6 @@ document.getElementById('quadraticForm').addEventListener('submit', function(eve
         ctx.lineTo(offsetX + 5, yPos);
         ctx.stroke();
     }
-    
     // Menambahkan grid
     ctx.beginPath();
     for (let x = 0; x <= canvas.width; x += scaleX) {
