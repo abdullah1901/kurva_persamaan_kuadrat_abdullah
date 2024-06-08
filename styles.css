@@ -10,11 +10,16 @@ body {
 
 .container {
     text-align: center;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 canvas {
     border: 1px solid black;
     margin-top: 20px;
+    width: 100%;
+    height: auto;
 }
 
 form {
