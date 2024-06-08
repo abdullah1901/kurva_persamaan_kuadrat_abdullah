@@ -21,6 +21,16 @@ body {
     padding-bottom: 80%; /* Ratio 4:5 untuk memperbesar ukuran canvas */
 }
 
+.input-row {
+    margin-bottom: 10px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
 canvas {
     position: absolute;
     top: 0;
@@ -29,6 +39,7 @@ canvas {
     height: 100%;
     border: 1px solid black;
 }
+
 
 form {
     margin-bottom: 20px;
